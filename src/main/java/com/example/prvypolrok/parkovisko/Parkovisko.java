@@ -1,4 +1,8 @@
 package com.example.prvypolrok.parkovisko;
+import com.example.prvypolrok.les.Krik;
+import com.example.prvypolrok.les.SpolocnyInterface;
+import com.example.prvypolrok.les.Strom;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +21,20 @@ public class Parkovisko {
         List<ParkoviskoInterface> parkovisko = new ArrayList<>();
         parkovisko.add(a1);
         parkovisko.add(a2);
-        parkovisko.add(a2);
-        parkovisko.add(a2);
+        parkovisko.add(a3);
+        parkovisko.add(a4);
         parkovisko.add(k1);
+        parkovisko.add(k2);
+
+        for(ParkoviskoInterface le : parkovisko){
+            ParkoviskoInterface zListu = le;
+            if(zListu instanceof Auto){
+                Auto autoZListu = (Auto) zListu;
+                System.out.println(autoZListu.getFarba());
+            }else{
+                Kolobezka kolobezkaZListu = (Kolobezka) zListu;
+                System.out.println("Farba Kolobezky " + kolobezkaZListu.getFarba());
+            }
+        }
     }
 }
