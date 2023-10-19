@@ -1,8 +1,4 @@
 package com.example.prvypolrok.parkovisko;
-import com.example.prvypolrok.les.Krik;
-import com.example.prvypolrok.les.SpolocnyInterface;
-import com.example.prvypolrok.les.Strom;
-
 import java.util.ArrayList;
 import java.util.List;
 
