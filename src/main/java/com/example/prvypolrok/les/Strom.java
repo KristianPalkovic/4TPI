@@ -1,6 +1,5 @@
 package com.example.prvypolrok.les;
 
-import com.example.prvypolrok.automobil.Automobil;
 
 import java.util.Objects;
 
