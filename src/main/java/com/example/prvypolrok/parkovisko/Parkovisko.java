@@ -1,8 +1,4 @@
 package com.example.prvypolrok.parkovisko;
-import com.example.prvypolrok.les.Krik;
-import com.example.prvypolrok.les.SpolocnyInterface;
-import com.example.prvypolrok.les.Strom;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +20,5 @@ public class Parkovisko {
         parkovisko.add(a2);
         parkovisko.add(a2);
         parkovisko.add(k1);
-
-        System.out.println(parkovisko);
     }
 }
