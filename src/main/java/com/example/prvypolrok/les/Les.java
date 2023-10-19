@@ -8,12 +8,20 @@ public class Les {
 
        Strom a1 = new Strom(15, "ihlicnaty", "smrek");
        Strom a2 = new Strom(15,"listnaty", "dub");
+       Strom a3 = new Strom(15,"listnaty", "dub");
+       Strom a4 = new Strom(15,"listnaty", "dub");
+
+       Krik k1 = new Krik();
+       Krik k2 = new Krik();
 
 
-       List<Strom> stromList = new ArrayList<>();
-       stromList.add(a1);
-       stromList.add(a2);
+       List<SpolocnyInterface> les = new ArrayList<>();
+        les.add(a1);
+        les.add(a2);
+        les.add(a2);
+        les.add(a2);
+        les.add(k1);
 
-        System.out.println(stromList);
+        System.out.println(les);
     }
 }

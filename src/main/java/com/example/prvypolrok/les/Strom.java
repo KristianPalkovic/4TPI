@@ -3,7 +3,7 @@ package com.example.prvypolrok.les;
 
 import java.util.Objects;
 
-public class Strom {
+public class Strom implements SpolocnyInterface {
     private int vyska;
     private String typ;
     private String nazov;
