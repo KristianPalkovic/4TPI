@@ -2,6 +2,8 @@ package com.example.prvypolrok.jvdc;
 import java.sql.*;
 
 public class MyConnection {
+    private static Object UzivatelDto;
+
     public static void main(String[] args) throws SQLException {
 
         String DB_URL = "jdbc:h2:tcp://localhost/C:\\Java\\TPI4-2023-2024\\mojadb";
@@ -15,13 +17,12 @@ public class MyConnection {
         ResultSet rs = stmt.executeQuery("SELECT * FROM UZIVATELIA"); // execute query
 
         while (rs.next()){
-            String name = rs.getString("ID") + " " + rs.getString("MENO") + " " +
-                    rs.getString("PRIEZVISKO"); // retrieve name from db
-            System.out.println(name); // print result on console
+            UzivatelDto = new UzivatelDto(rs.getInt("ID"), rs.getString("MENO"),
+                    rs.getString("PRIEZVISKO"), rs.getString("ADRESA"));
+            System.out.println(UzivatelDto);
         }
 
         stmt.close(); // close statement
         conn.close(); // close connection
-
     }
 }
