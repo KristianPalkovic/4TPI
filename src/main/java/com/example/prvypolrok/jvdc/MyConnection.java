@@ -12,9 +12,16 @@ public class MyConnection {
         Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
         stmt = conn.createStatement();
 
-        ResultSet rs = stmt.executeQuery("SELECT + FROM UZIVATELIA");
-        rs.next();
-        String name = rs.getString("ID");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM UZIVATELIA"); // execute query
+
+        while (rs.next()){
+            String name = rs.getString("ID") + " " + rs.getString("MENO") + " " +
+                    rs.getString("PRIEZVISKO"); // retrieve name from db
+            System.out.println(name); // print result on console
+        }
+
+        stmt.close(); // close statement
+        conn.close(); // close connection
 
     }
 }
