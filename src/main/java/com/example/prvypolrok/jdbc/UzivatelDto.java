@@ -1,4 +1,4 @@
-package com.example.prvypolrok.jvdc;
+package com.example.prvypolrok.jdbc;
 
 public class UzivatelDto {
     private int ID;
